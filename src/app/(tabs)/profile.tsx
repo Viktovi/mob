@@ -14,7 +14,7 @@ export default function StudentProfileScreen() {
           {/* Аватар */}
           <Image
             source={{
-              uri: "https://",
+              uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/avat%20(1).png",
             }}
             style={styles.avatar}
           />
@@ -39,21 +39,41 @@ export default function StudentProfileScreen() {
           <View style={styles.games}>
             <View style={styles.gameCard}>
               <Image
-                source={require("../../../assets/images/val.png")}
+                source={{
+                  uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/val.png",
+                }}
                 style={styles.gameImage}
               />
               <Text style={styles.gameName}>Valorant</Text>
             </View>
 
             <View style={styles.gameCard}>
+              <Image
+                source={{
+                  uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/cs.png",
+                }}
+                style={styles.gameImage}
+              />
               <Text style={styles.gameName}>CS2</Text>
             </View>
 
             <View style={styles.gameCard}>
+              <Image
+                source={{
+                  uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/previewfile_2995893840.png",
+                }}
+                style={styles.gameImage}
+              />
               <Text style={styles.gameName}>Dota 2</Text>
             </View>
 
             <View style={styles.gameCard}>
+              <Image
+                source={{
+                  uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/Fortnite_F_lettermark_logo.png",
+                }}
+                style={styles.gameImage}
+              />
               <Text style={styles.gameName}>Fortnite</Text>
             </View>
           </View>
@@ -65,6 +85,12 @@ export default function StudentProfileScreen() {
 
           <View style={styles.card}>
             <Text style={styles.cardText}>Valorant</Text>
+            <Image
+              source={{
+                uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/val.png",
+              }}
+              style={styles.gameImage}
+            />
             <View style={styles.statsRow}>
               <Text style={styles.description}>K/D: 1.2</Text>
               <Text style={styles.description}>Win %: 54%</Text>
@@ -73,6 +99,12 @@ export default function StudentProfileScreen() {
 
           <View style={styles.card}>
             <Text style={styles.cardText}>CS2</Text>
+            <Image
+              source={{
+                uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/cs.png",
+              }}
+              style={styles.gameImage}
+            />
             <View style={styles.statsRow}>
               <Text style={styles.description}>K/D: 1.0</Text>
               <Text style={styles.description}>Win %: 47%</Text>
@@ -85,16 +117,34 @@ export default function StudentProfileScreen() {
           <Text style={styles.sectionTitle}>Посилання на акаунти</Text>
 
           <View style={styles.accountCard}>
+            <Image
+              source={{
+                uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/steam.png",
+              }}
+              style={styles.gameImage}
+            />
             <Text style={styles.cardText}>Steam</Text>
             <Text style={styles.connected}>Підключено</Text>
           </View>
 
           <View style={styles.accountCard}>
+            <Image
+              source={{
+                uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/riot.png",
+              }}
+              style={styles.gameImage}
+            />
             <Text style={styles.cardText}>Riot Games</Text>
             <Text style={styles.connected}>Підключено</Text>
           </View>
 
-          <View style={[styles.accountCard, styles.highlightedCard]}>
+          <View style={styles.accountCard}>
+            <Image
+              source={{
+                uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/EG.png",
+              }}
+              style={styles.gameImage}
+            />
             <Text style={styles.cardText}>Epic Games</Text>
             <Text style={styles.notConnected}>Не підключено</Text>
           </View>
@@ -224,6 +274,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#292929",
     padding: 8,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#553333",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -233,13 +285,11 @@ const styles = StyleSheet.create({
     padding: 15,
     marginBottom: 10,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#553333",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-  },
-
-  highlightedCard: {
-    backgroundColor: "#252525",
   },
 
   card: {
