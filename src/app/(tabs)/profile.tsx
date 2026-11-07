@@ -84,28 +84,28 @@ export default function StudentProfileScreen() {
           <Text style={styles.sectionTitle}>Статистика по іграх</Text>
 
           <View style={styles.card}>
-            <Text style={styles.cardText}>Valorant</Text>
             <Image
               source={{
                 uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/val.png",
               }}
-              style={styles.gameImage}
+              style={styles.statsImage}
             />
-            <View style={styles.statsRow}>
+            <Text style={styles.cardText}>Valorant</Text>
+            <View style={styles.statsInfo}>
               <Text style={styles.description}>K/D: 1.2</Text>
               <Text style={styles.description}>Win %: 54%</Text>
             </View>
           </View>
 
           <View style={styles.card}>
-            <Text style={styles.cardText}>CS2</Text>
             <Image
               source={{
                 uri: "https://raw.githubusercontent.com/Viktovi/mob/main/assets/images/cs.png",
               }}
-              style={styles.gameImage}
+              style={styles.statsImage}
             />
-            <View style={styles.statsRow}>
+            <Text style={styles.cardText}>CS2</Text>
+            <View style={styles.statsInfo}>
               <Text style={styles.description}>K/D: 1.0</Text>
               <Text style={styles.description}>Win %: 47%</Text>
             </View>
@@ -123,7 +123,7 @@ export default function StudentProfileScreen() {
               }}
               style={styles.gameImage}
             />
-            <Text style={styles.cardText}>Steam</Text>
+            <Text style={styles.linkText}>Steam</Text>
             <Text style={styles.connected}>Підключено</Text>
           </View>
 
@@ -134,7 +134,7 @@ export default function StudentProfileScreen() {
               }}
               style={styles.gameImage}
             />
-            <Text style={styles.cardText}>Riot Games</Text>
+            <Text style={styles.linkText}>Riot Games</Text>
             <Text style={styles.connected}>Підключено</Text>
           </View>
 
@@ -145,7 +145,7 @@ export default function StudentProfileScreen() {
               }}
               style={styles.gameImage}
             />
-            <Text style={styles.cardText}>Epic Games</Text>
+            <Text style={styles.linkText}>Epic Games</Text>
             <Text style={styles.notConnected}>Не підключено</Text>
           </View>
         </View>
@@ -209,6 +209,7 @@ const styles = StyleSheet.create({
   profileInfo: {
     padding: 5,
     alignItems: "center",
+    flex: 1,
   },
 
   name: {
@@ -255,19 +256,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  gameName: {
-    color: "#ffffff",
-    fontSize: 12,
-    textAlign: "center",
-  },
-
-  gameImage: {
-    width: 45,
-    height: 45,
-    marginBottom: 8,
-    resizeMode: "contain",
-  },
-
   gameCard: {
     width: "23%",
     minHeight: 90,
@@ -278,6 +266,51 @@ const styles = StyleSheet.create({
     borderColor: "#553333",
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  gameImage: {
+    width: 45,
+    height: 45,
+    marginBottom: 8,
+    resizeMode: "contain",
+  },
+
+  gameName: {
+    color: "#ffffff",
+    fontSize: 12,
+    textAlign: "center",
+  },
+
+  card: {
+    backgroundColor: "#292929",
+    padding: 15,
+    marginBottom: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#553333",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  statsImage: {
+    width: 40,
+    height: 40,
+    resizeMode: "contain",
+  },
+
+  cardText: {
+    color: "#ffffff",
+    fontSize: 16,
+    marginLeft: 10,
+    flex: 1,
+  },
+
+  statsInfo: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 20,
+    marginRight: 15,
   },
 
   accountCard: {
@@ -292,26 +325,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  card: {
-    backgroundColor: "#292929",
-    padding: 15,
-    marginBottom: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#553333",
-  },
-
-  cardText: {
+  linkText: {
     color: "#ffffff",
-    fontSize: 15,
-  },
-
-  statsRow: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 10,
-    gap: 30,
+    fontSize: 16,
+    marginLeft: 10,
+    flex: 1,
   },
 
   connected: {
