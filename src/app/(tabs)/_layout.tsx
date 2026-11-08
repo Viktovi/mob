@@ -1,36 +1,28 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        // Налаштування заголовка екрана
-        headerShown: true,
-        headerStyle: {
+        headerShown: false,
+
+        sceneStyle: {
+          paddingTop: 20,
           backgroundColor: "#111111",
-          height: 30,
-        },
-        headerTintColor: "#ffffff",
-        headerTitleStyle: {
-          fontWeight: "bold",
         },
 
-        // Кольори нижньої навігації
         tabBarActiveTintColor: "#ff3333",
         tabBarInactiveTintColor: "#888888",
 
-        // Стилі нижньої панелі
         tabBarStyle: {
           backgroundColor: "#1c1c1c",
           borderTopColor: "#333333",
           borderTopWidth: 1,
-          height: 70,
+          height: 65,
           paddingTop: 8,
           paddingBottom: 8,
         },
 
-        // Стилі підписів вкладок
         tabBarLabelStyle: {
           fontSize: 11,
           fontWeight: "500",
@@ -81,7 +73,6 @@ export default function TabsLayout() {
         }}
       />
 
-      {/* Sandbox приховано з нижньої навігації */}
       <Tabs.Screen
         name="sandbox"
         options={{
